@@ -15,6 +15,7 @@ public class SyncController {
   public String sync(@RequestBody Store store) {
     // Logic to handle synchronization
     try {
+      System.out.println("Received store object: " + store);
       // Convert the Store object to a JSON string
       return new ObjectMapper().writeValueAsString(store);
     } catch (JsonProcessingException e) {
